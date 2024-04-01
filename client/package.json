@@ -1,0 +1,41 @@
+{
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "codegen": "graphql-codegen --config codegen.ts",
+    "codegen-init": "graphql-codegen init"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.8.10",
+    "@graphql-codegen/cli": "^5.0.0",
+    "@graphql-codegen/typescript-msw": "^2.1.0",
+    "@graphql-codegen/typescript-operations": "^4.0.1",
+    "@graphql-codegen/typescript-react-apollo": "^4.1.0",
+    "@graphql-codegen/typescript-resolvers": "^4.0.1",
+    "graphql": "^16.8.1",
+    "msw": "^2.1.5",
+    "next": "14.1.0",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "autoprefixer": "^10.0.1",
+    "eslint": "^8",
+    "eslint-config-next": "14.1.0",
+    "graphql-codegen": "^0.4.0",
+    "postcss": "^8",
+    "tailwindcss": "^3.3.0",
+    "typescript": "^5",
+    "@graphql-codegen/introspection": "4.0.0",
+    "@graphql-codegen/cli": "5.0.2",
+    "@graphql-codegen/client-preset": "4.2.2"
+  }
+}

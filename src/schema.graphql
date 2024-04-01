@@ -1,0 +1,48 @@
+scalar UUID
+
+type Pirate {
+  id: ID!
+  name: String!
+}
+
+type Crew {
+  id: ID!
+  name: String!
+  pirates: [Pirate!]!
+}
+
+type Ship {
+  id: ID!
+  name: String!
+  crew: Crew!
+}
+
+input UpsertPirate {
+    id: ID
+    name: String!
+    crewId: UUID
+}
+
+input UpsertCrew {
+    id: ID
+    name: String!
+    shipId: UUID
+}
+
+input UpsertShip {
+    id: ID
+    name: String!
+}
+
+type Query {
+  pirates: [Pirate!]!
+  crews: [Crew!]!
+  ships: [Ship!]!
+  ship(id: UUID): Ship!
+}
+
+type Mutation {
+  createPirate(input: UpsertPirate!): Pirate!
+  createCrew(input: UpsertCrew!): Crew!
+  createShip(input: UpsertShip!): Ship!
+}
